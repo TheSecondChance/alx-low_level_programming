@@ -18,8 +18,7 @@ void more_numbers(void)
 				_putchar(num2 / 10 + '0');
 				_putchar(num2 % 10 + '0');
 			}
-			else
-				_putchar(num2 + 48);
+			_putchar(num2 + 48);
 		}
 		_putchar('\n');
 	}
