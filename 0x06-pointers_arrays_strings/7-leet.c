@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 /**
  * lett - fuction woow
  * @s: this argument that pass.
