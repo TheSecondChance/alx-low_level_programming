@@ -2,7 +2,7 @@
 /**
  * lett - fuction woow
  * @s: this argument that pass.
- * Return: s
+ * Return: the pointer s.
  */
 char *leet(char *s)
 {
