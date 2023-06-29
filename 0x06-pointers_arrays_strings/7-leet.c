@@ -21,6 +21,7 @@ char *leet(char *s)
 				break;
 			}
 		}
+		count++;
 	}
 	return (s);
 }
