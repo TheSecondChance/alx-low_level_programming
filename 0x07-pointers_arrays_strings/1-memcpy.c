@@ -1,9 +1,10 @@
-<include "main.h"
+#include "main.h"
 /**
- * _memcpy - fuction that copy the src tod dest.
+ * _memcpy - copies memory area
  * @dest: argument first
  * @src: second argumetn pass
  * @n: finaly pass argument
+ * Return: dest poiner.
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
