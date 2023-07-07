@@ -1,4 +1,6 @@
-int _putchar(char c);
+#ifndef _Main_H
+#define _Main_H
+nt _putchar(char c);
 int _islower(int c);
 int _isalpha(int c);
 int _abs(int n);
