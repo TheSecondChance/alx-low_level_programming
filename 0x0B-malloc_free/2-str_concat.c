@@ -26,10 +26,10 @@ char *str_concat(char *s1, char *s2)
 		free(concat);
 		return (NULL);
 	}
-	for (j = 0; j < co1; j++)
-		concat[j] = s1[j];
+	for (m = 0; m < co1; m++)
+		concat[m] = s1[m];
 	lim = co2;
-	for (m = 0; m <= lim; m++, j++)
-		concat[j] = s2[m];
+	for (j = 0; j <= lim; m++, j++)
+		concat[m] = s2[j];
 	return (concat);
 }
