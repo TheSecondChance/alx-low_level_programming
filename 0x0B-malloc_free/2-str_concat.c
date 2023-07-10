@@ -8,7 +8,7 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	int i, j, m, co1 = 0, co2 = 0;
+	int i, j, m, co1 = 0, co2 = 0, lim;
 	char *concat;
 
 	if (s1 == NULL)
@@ -26,9 +26,10 @@ char *str_concat(char *s1, char *s2)
 		free(concat);
 		return (NULL);
 	}
-	for (j = 0; s1[j] != '\0'; j++)
+	for (j = 0; j < co1; j++)
 		concat[j] = s1[j];
-	for (m = 0; s2[m] != '\0'; m++, j++)
+	lim = j;
+	for (m = 0; m <= lim; m++, j++)
 		concat[j] = s2[m];
 	return (concat);
 }
