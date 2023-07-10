@@ -22,8 +22,10 @@ char *str_concat(char *s1, char *s2)
 		s1[count] = s2[i];
 	concat = (char *)malloc((count + 1) * sizeof(char));
 	if (concat == NULL)
+	{
 		free(concat);
 		return (NULL);
+	}
 	for (j = 0; s1[j] != '\0'; j++)
 		concat[j] = s1[j];
 	for (m = 0; s2[m] != '\0'; m++, j++)
