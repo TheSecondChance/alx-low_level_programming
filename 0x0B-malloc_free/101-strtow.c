@@ -1,48 +1,67 @@
-#include <stdlib.h>
 #include "main.h"
+#include <stdlib.h>
+
 /**
- * strtow - splits a string ino words.
- * @str: string parameter
- * Return: pointer of new allocate.
+ * ch_free_grid - frees a 2 dimensional array.
+ * @grid: multidimensional array of char.
+ * @height: height of the array.
+ *
+ * Return: no return
+ */
+void ch_free_grid(char **grid, unsigned int height)
+{
+	if (grid != NULL && height != 0)
+	{
+		for (; height > 0; height--)
+			free(grid[height]);
+		free(grid[height]);
+		free(grid);
+	}
+}
+
+/**
+ * strtow - splits a string into words.
+ * @str: string.
+ *
+ * Return: pointer of an array of integers
  */
 char **strtow(char *str)
 {
-	char **words = NULL;
-	int i, k, j, len = 0, wordCount = 0, start = 0;
+	char **aout;
+	unsigned int c, height, i, j, a1;
 
 	if (str == NULL || *str == '\0')
 		return (NULL);
-	for (i = 0; str[i] != '\0'; i++)
+	for (c = height = 0; str[c] != '\0'; c++)
+		if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] == '\0'))
+			height++;
+	aout = malloc((height + 1) * sizeof(char *));
+	if (aout == NULL || height == 0)
 	{
-		if (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
-			wordCount++;
-	}
-	words = (char **)malloc((wordCount + 1) * sizeof(char *));
-	if (words == NULL)
+		free(aout);
 		return (NULL);
-	for (i = 0, j = 0; str[i] != '\0'; i++)
-	{
-		if (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
-			start = i;
 	}
-	if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
+	for (i = a1 = 0; i < height; i++)
 	{
-		len = i - start + 1;
-		words[j] = (char *)malloc((len + 2) * sizeof(char));
-		if (words[j] == NULL)
+		for (c = a1; str[c] != '\0'; c++)
 		{
-			for  (i = 0; i < j; i++)
-				free(words[i]);
-			free(words);
-			return (NULL);
+			if (str[c] == ' ')
+				a1++;
+			if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] == '\0'))
+			{
+				aout[i] = malloc((c - a1 + 2) * sizeof(char));
+				if (aout[i] == NULL)
+				{
+					ch_free_grid(aout, i);
+					return (NULL);
+				}
+				break;
+			}
 		}
-	for (k = 0; k < len; k++)
-	{
-		words[j][k] = str[start + k];
+		for (j = 0; a1 <= c; a1++, j++)
+			aout[i][j] = str[a1];
+		aout[i][j] = '\0';
 	}
-	words[j][len] = '\0';
-	j++;
-	}
-	words[j] = NULL;
-	return (words);
+	aout[i] = NULL;
+	return (aout);
 }
