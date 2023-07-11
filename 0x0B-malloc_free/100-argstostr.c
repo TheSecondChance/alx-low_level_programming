@@ -17,7 +17,11 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 
 	for (i = 0; i < ac; i++)
-		len += strlen(av[i]) + 1;
+	{
+		for (j = 0; av[i][j] != '\0'; j++)
+			len++;
+		len++;
+	}
 	st = (char *)malloc(len * sizeof(char));
 	if (st == NULL)
 	{
