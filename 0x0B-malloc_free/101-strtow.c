@@ -17,7 +17,7 @@ char **strtow(char *str)
 		if (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
 			wordCount++;
 	}
-	words = (char **)malloc((wordCoutn + 1) * sizeof(char *));
+	words = (char **)malloc((wordCount + 1) * sizeof(char *));
 	if (words == NULL)
 		return (NULL);
 	for (i = 0, j = 0; str[i] != '\0'; i++)
