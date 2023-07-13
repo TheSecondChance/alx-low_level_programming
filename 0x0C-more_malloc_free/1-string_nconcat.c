@@ -27,10 +27,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	concat = malloc(two + 1);
 
 	if (concat == NULL)
-	{
-		free(concat);
 		return (NULL);
-	}
 	for (i = 0; i < two; i++)
 		if (i < co1)
 			concat[i] = s1[i];
