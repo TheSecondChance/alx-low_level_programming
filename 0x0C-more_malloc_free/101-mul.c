@@ -70,7 +70,7 @@ void multiply(char *num1, char *num2)
                         int pos2 = i + j + 1;
 			int sum = mul + result[pos2];
 
-                        result[pos1] += sum / 10;
+                        result[pos] += sum / 10;
                         result[pos2] = sum % 10;
                 }
         }
