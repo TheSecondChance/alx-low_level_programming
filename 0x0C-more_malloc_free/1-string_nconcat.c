@@ -22,7 +22,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	while (s2[co2] != '\0')
 		co2++;
 
-	if (n > co2)
+	if (n >= co2)
 		n = co2;
 
 	two = co1 + n;
