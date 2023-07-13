@@ -2,6 +2,7 @@
 /**
  * malloc_checked - allocates memory using malloc.
  * @b: number of byte that allocate
+ * Return: exit status.
  */
 void *malloc_checked(unsigned int b)
 {
