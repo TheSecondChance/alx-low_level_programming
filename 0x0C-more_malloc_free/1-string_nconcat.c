@@ -32,7 +32,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	}
 	for (i = 0; i < two; i++)
-		concat[i] = s1[i];
+		if (i < co1)
+			concat[i] = s1[i];
 	for (j = 0; j <= n; j++, i++)
 		concat[i] = s2[j];
 	concate[i] = '\0';
