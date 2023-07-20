@@ -13,7 +13,9 @@ void print_all(const char * const format, ...)
 	char *str;
 	const char f_arg[] = "cifs";
 
-	va_start(format && format[i])
+	va_start(list, format);
+
+	while (format && format[i])
 	{
 		j = 0;
 		while (f_arg[j])
@@ -34,10 +36,10 @@ void print_all(const char * const format, ...)
 				printf("%d", va_arg(list, int)), f = 1;
 				break;
 			case 'f':
-				pirntf("%f", va_arg(list, int)), f = 1;
+				printf("%f", va_arg(list, double)), f = 1;
 				break;
 			case 's':
-				str = va_arg(lsit, char *);
+				str = va_arg(list, char *);
 				if (!str)
 				{
 					printf("(nil)");
