@@ -4,7 +4,6 @@
 /**
  * print_all - function that print anything.
  * @format: list of types of argument passed to the function.
- * Return: nothing
  */
 void print_all(const char * const format, ...)
 {
@@ -14,7 +13,6 @@ void print_all(const char * const format, ...)
 	const char f_arg[] = "cifs";
 
 	va_start(list, format);
-
 	while (format && format[i])
 	{
 		j = 0;
@@ -29,8 +27,7 @@ void print_all(const char * const format, ...)
 		switch (format[i])
 		{
 			case 'c':
-				printf("%c", va_arg(list, int));
-				f = 1;
+				printf("%c", va_arg(list, int)), f = 1;
 				break;
 			case 'i':
 				printf("%d", va_arg(list, int)), f = 1;
