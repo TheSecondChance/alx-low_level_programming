@@ -21,8 +21,7 @@ void print_all(const char * const format, ...)
 			{
 				printf(", ");
 				break;
-			}
-			j++;
+			} j++;
 		}
 		switch (format[i])
 		{
@@ -31,27 +30,21 @@ void print_all(const char * const format, ...)
 				f = 1;
 				break;
 			case 'i':
-				printf("%d", va_arg(list, int));
-				f = 1;
+				printf("%d", va_arg(list, int)), f = 1;
 				break;
 			case 'f':
-				pirntf("%f", va_arg(list, int));
-				f = 1;
+				pirntf("%f", va_arg(list, int)), f = 1;
 				break;
 			case 's':
 				str = va_arg(lsit, char *);
 				if (!str)
 				{
 					printf("(nil)");
-					f = 1;
 					break;
 				}
 				printf("%s", str);
-				f = 1;
 				break;
-		}
-		i++;
+		} i++;
 	}
-	printf("\n");
-	va_end(list);
+	printf("\n"), va_end(list);
 }
