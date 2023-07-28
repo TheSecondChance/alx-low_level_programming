@@ -1,7 +1,3 @@
-/*
- * File: 0-print_list.c
- * Auth: Solomon Kassa
- */
 
 #include "lists.h"
 #include <stdio.h>
