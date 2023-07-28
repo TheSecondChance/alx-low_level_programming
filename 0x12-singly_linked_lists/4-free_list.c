@@ -1,7 +1,3 @@
-/*
- * File: 4-free_list.c
- * Auth: Solomon Kassa
- */
 
 #include "lists.h"
 #include <stdlib.h>
