@@ -1,7 +1,3 @@
-/*
- * File: 3-add_node_end.c
- * Auth: Solomon Kassa
- */
 
 #include "lists.h"
 #include <string.h>
