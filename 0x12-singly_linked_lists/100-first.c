@@ -1,7 +1,3 @@
-/*
- * File: 100-first.c
- * Auth: Solomon Kassa
- */
 
 #include <stdio.h>
 
