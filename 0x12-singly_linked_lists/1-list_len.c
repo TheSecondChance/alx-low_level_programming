@@ -1,7 +1,3 @@
-/*
- * File: 1-list_len.c
- * Author : Solomon Kassa
- */
 
 #include "lists.h"
 #include <stdio.h>
