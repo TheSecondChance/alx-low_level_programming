@@ -1,4 +1,4 @@
-#include "main.h"
+#include "lists.h"
 /**
  * add_nodeint_end - add a new node at the end of lsit.
  * @head: the fist node
