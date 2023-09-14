@@ -1,8 +1,8 @@
 #include "lists.h"
 /**
- *
  * sum_dlistint - thsi for sum of all the data (n) of a dlistint_t list.
  * @head: pointer to the list
+ *
  *
  * Return: This for all data in the list, 0 if the lost is empty.
  **/
