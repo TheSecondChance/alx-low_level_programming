@@ -7,8 +7,8 @@
  **/
 void free_dlistint(dlistint_t *head)
 {
-	dlistint_t *node_current
-	dlistint_t *next_node
+	dlistint_t *node_current;
+	dlistint_t *next_node;
 
 	if (head)
 	{
