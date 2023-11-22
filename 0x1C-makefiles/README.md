@@ -8,7 +8,7 @@ Each rule typically includes a target, dependencies, and a set of commands. Here
 
 # Makefile for a simple C program
 
-# Compiler
+Compiler
 CC = gcc
 
 # Compiler flags
