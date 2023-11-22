@@ -8,35 +8,35 @@ Each rule typically includes a target, dependencies, and a set of commands. Here
 
 # Makefile for a simple C program
 
-Compiler
-CC = gcc
+# Compiler
+--> CC = gcc
 
 # Compiler flags
-CFLAGS = -Wall -g
+--> CFLAGS = -Wall -g
 
 # Target executable
-TARGET = myprogram
+--> TARGET = myprogram
 
 # Source files
-SRCS = main.c helper.c
+--> SRCS = main.c helper.c
 
 # Object files
-OBJS = $(SRCS:.c=.o)
+--> OBJS = $(SRCS:.c=.o)
 
 # Default target
-all: $(TARGET)
+--> all: $(TARGET)
 
 # Rule to build the executable
-$(TARGET): $(OBJS)
-	$(CC) $(CFLAGS) -o $@ $^
+--> $(TARGET): $(OBJS)
+	    $(CC) $(CFLAGS) -o $@ $^
 
 # Rule to compile source files to object files
-%.o: %.c
-	$(CC) $(CFLAGS) -c -o $@ $<
+--> %.o: %.c
+	    $(CC) $(CFLAGS) -c -o $@ $<
 
 # Clean up the build files
-clean:
-	rm -f $(OBJS) $(TARGET)
+--> clean:
+	    rm -f $(OBJS) $(TARGET)
 
 
 CC is the compiler (gcc in this case).
